@@ -2,11 +2,19 @@ import Jugadores from "./jugador.js";
 
 const jugadores = Jugadores.obtener
 const eventos = {
-	'w': jugadores[0].moverHacia['arriba'],
-	's': jugadores[0].moverHacia['abajo'],
+	'w': () => {
+		if (jugadores[0].arriba >= 0) jugadores[0].moverHacia['arriba']()
+	},
+	's': () => {
+		if (jugadores[0].arriba <= window.innerHeight / 2) jugadores[0].moverHacia['abajo']()
+	},
 
-	'arrowup': jugadores[1].moverHacia['arriba'],
-	'arrowdown': jugadores[1].moverHacia['abajo'],
+	'arrowup': () => {
+		if (jugadores[1].arriba >= 0) jugadores[1].moverHacia['arriba']()
+	},
+	'arrowdown': () => {
+		if (jugadores[1].arriba <= window.innerHeight / 2) jugadores[1].moverHacia['abajo']()
+	},
 }
 
 export default function iniciarEventos() {

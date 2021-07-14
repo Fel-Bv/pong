@@ -82,22 +82,22 @@ export default function iniciar() {
 			// Jugador 1
 			if (window.innerHeight / 2 - balon.arriba >= Jugadores.obtener[0].arriba &&
 				window.innerHeight / 2 - balon.arriba <= Jugadores.obtener[0].arriba + window.innerHeight / 2) {
-				if (balon.izquierda >= window.innerWidth / 2 - 88) {
+				if (balon.izquierda >= window.innerWidth / 2 - 87) {
 					// Para poder hacer la ronaldinha (o sea pasar el balon dentro del jugador,
 					// como si el jugador fuera un tunel):
 					moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
 				}
-				if (balon.izquierda >= window.innerWidth / 2 - 58) {
+				if (balon.izquierda >= window.innerWidth / 2 - 57) {
 					moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
 				}
 			}
 			// Jugador 2
 			if (window.innerHeight / 2 - balon.arriba >= Jugadores.obtener[1].arriba &&
 				window.innerHeight / 2 - balon.arriba <= Jugadores.obtener[1].arriba + window.innerHeight / 2) {
-					if (window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 88) {
+					if (window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 87) {
 						moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
 					}
-					if (window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 58) {
+					if (window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 57) {
 						moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
 					}
 			}
