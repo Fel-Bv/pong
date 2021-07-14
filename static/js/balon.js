@@ -86,9 +86,13 @@ export default function iniciar() {
 			}
 			// Jugador 2
 			if (window.innerHeight / 2 - balon.arriba >= Jugadores.obtener[1].arriba &&
-				window.innerHeight / 2 - balon.arriba <= Jugadores.obtener[1].arriba + window.innerHeight / 2 &&
-				window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 85) {
-					moverHacia[0] = 0
+				window.innerHeight / 2 - balon.arriba <= Jugadores.obtener[1].arriba + window.innerHeight / 2) {
+					if (window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 80) {
+						moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
+					}
+					if (window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 50) {
+						moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
+					}
 			}
 		}, 50)
 	})
