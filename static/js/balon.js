@@ -77,20 +77,25 @@ export default function iniciar() {
 				reiniciar()
 			}
 
+
 			// Checando si el balon ha chocado con uno de los jugadores
 			// Jugador 1
 			if (window.innerHeight / 2 - balon.arriba >= Jugadores.obtener[0].arriba &&
-				window.innerHeight / 2 - balon.arriba <= Jugadores.obtener[0].arriba + window.innerHeight / 2 &&
-				balon.izquierda >= window.innerWidth / 2 - 80) {
-					moverHacia[0] = 1
+				window.innerHeight / 2 - balon.arriba <= Jugadores.obtener[0].arriba + window.innerHeight / 2) {
+				if (balon.izquierda >= window.innerWidth / 2 - 88) {
+					moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
+				}
+				if (balon.izquierda >= window.innerWidth / 2 - 58) {
+					moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
+				}
 			}
 			// Jugador 2
 			if (window.innerHeight / 2 - balon.arriba >= Jugadores.obtener[1].arriba &&
 				window.innerHeight / 2 - balon.arriba <= Jugadores.obtener[1].arriba + window.innerHeight / 2) {
-					if (window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 80) {
+					if (window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 88) {
 						moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
 					}
-					if (window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 50) {
+					if (window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 58) {
 						moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
 					}
 			}
