@@ -83,6 +83,8 @@ export default function iniciar() {
 			if (window.innerHeight / 2 - balon.arriba >= Jugadores.obtener[0].arriba &&
 				window.innerHeight / 2 - balon.arriba <= Jugadores.obtener[0].arriba + window.innerHeight / 2) {
 				if (balon.izquierda >= window.innerWidth / 2 - 88) {
+					// Para poder hacer la ronaldinha (o sea pasar el balon dentro del jugador,
+					// como si el jugador fuera un tunel):
 					moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
 				}
 				if (balon.izquierda >= window.innerWidth / 2 - 58) {
