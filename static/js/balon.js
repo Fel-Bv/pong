@@ -94,12 +94,14 @@ export default function iniciar() {
 			// Jugador 2
 			if (window.innerHeight / 2 - balon.arriba >= Jugadores.obtener[1].arriba &&
 				window.innerHeight / 2 - balon.arriba <= Jugadores.obtener[1].arriba + window.innerHeight / 2) {
-					if (window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 80) {
-						moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
-					}
-					if (window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 45) {
-						moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
-					}
+				if (window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 80) {
+					// Para poder hacer la ronaldinha (o sea pasar el balon dentro del jugador,
+					// como si el jugador fuera un tunel):
+					moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
+				}
+				if (window.innerWidth / 2 + balon.izquierda * -1 >= window.innerWidth - 45) {
+					moverHacia[0] == 0? moverHacia[0] = 1: moverHacia[0] = 0
+				}
 			}
 		}, 50)
 	})
